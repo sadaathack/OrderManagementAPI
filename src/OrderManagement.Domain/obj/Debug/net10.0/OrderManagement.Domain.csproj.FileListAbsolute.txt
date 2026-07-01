@@ -1,0 +1,11 @@
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\bin\Debug\net10.0\OrderManagement.Domain.deps.json
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\bin\Debug\net10.0\OrderManagement.Domain.dll
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\bin\Debug\net10.0\OrderManagement.Domain.pdb
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.AssemblyInfo.cs
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.dll
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\refint\OrderManagement.Domain.dll
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\OrderManagement.Domain.pdb
+C:\Users\mosad\Documents\Projects\src\OrderManagement.Domain\obj\Debug\net10.0\ref\OrderManagement.Domain.dll
