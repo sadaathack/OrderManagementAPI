@@ -48,22 +48,31 @@ public class ProductsController : ControllerBase
     }
 
     // PUT: api/products/5
-     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteProduct(int id)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateProduct(int id, Product product)
     {
-        var product = await _context.Products.FindAsync(id);
-        if (product == null)
+        if (id != product.Id)
         {
-            return NotFound();
+            return BadRequest();
         }
 
-        _context.Products.Remove(product);
-        await _context.SaveChangesAsync();
+        _context.Entry(product).State = EntityState.Modified;
+
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!await _context.Products.AnyAsync(p => p.Id == id))
+            {
+                return NotFound();
+            }
+            throw;
+        }
+
         return NoContent();
     }
-So the very end of your file should look like:
-csharp        return NoContent();
-    } 
 
     // DELETE: api/products/5
     [HttpDelete("{id}")]
@@ -77,23 +86,6 @@ csharp        return NoContent();
 
         _context.Products.Remove(product);
         await _context.SaveChangesAsync();
-        return NoContent();
-    }
-
-
-    // DELETE: api/products/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteProduct(int id)
-    {
-        var product = await _context.Products.FindAsync(id);
-        if (product == null)
-        {
-            return NotFound();
-        }
-
-        _context.Products.Remove(product);
-        await _context.SaveChangesAsync();
-
         return NoContent();
     }
 }
